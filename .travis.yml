@@ -1,0 +1,10 @@
+language: generic
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t DevImage -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true DevImage npm run test
