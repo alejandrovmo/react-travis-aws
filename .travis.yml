@@ -11,9 +11,9 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: "us-east-2"
-  app:  "nodejsReactAWsapp"
-  env:  "Nodejsreactawsapp-env"
+  region: us-east-2
+  app:  nodejsReactAWsapp
+  env:  Nodejsreactawsapp-env
   bucket_name: "elasticbeanstalk-us-east-2-087903820438"
   bucket_path:  "nodejsReactAWsapp"
   on:
