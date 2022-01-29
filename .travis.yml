@@ -16,5 +16,7 @@ deploy:
   env:  "Nodejsreactawsapp-env"
   bucket_name: "elasticbeanstalk-us-east-2-087903820438"
   bucket_path:  "nodejsReactAWsapp"
+  on:
+    branch: master
   access_key_id:  $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
