@@ -6,9 +6,9 @@ pipeline{
                 git 'https://github.com/alejandrovmo/react-travis-aws.git'
             }
         }
-        stage('build'){
+        stage('Build'){
             steps{
-                'docker build -t devimage -f Dockerfile.dev .'
+                docker build -t devimage -f Dockerfile.dev .
             }
         }
     }
