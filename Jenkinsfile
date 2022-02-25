@@ -1,5 +1,5 @@
 pipeline{
-    agent any
+    agent { docker {image 'docker'}}
     stages{        
         stage('Git clone'){
             steps{
@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Build stage'){
             steps{
-                zsh 'docker build -t devimage -f Dockerfile.dev .'
+                sh 'docker build -t devimage -f Dockerfile.dev . --privileged --name jenkins jenkins'
             }
         }
     }
