@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Build stage'){
             steps{
-                sh 'docker build -d --network=host -t devimage -f Dockerfile.dev .'
+                sh 'docker build -t devimage -f Dockerfile.dev .'
             }
         }
     }
