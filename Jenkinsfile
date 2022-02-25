@@ -1,10 +1,5 @@
 pipeline{
-    agent {
-        docker {
-            image 'docker'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
-        }
-    }
+    agent any
     stages{        
         stage('Git clone'){
             steps{
@@ -13,7 +8,7 @@ pipeline{
         }
         stage('Build stage'){
             steps{
-                sh 'docker build -t devimage -f Dockerfile.dev .'
+                sh 'docker build -d --network=host -t devimage -f Dockerfile.dev .'
             }
         }
     }
