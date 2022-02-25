@@ -8,7 +8,7 @@ pipeline{
         }
         stage('build'){
             steps{
-                docker build -t devimage -f Dockerfile.dev .
+                sh 'docker build -t devimage -f Dockerfile.dev .'
             }
         }
     }
