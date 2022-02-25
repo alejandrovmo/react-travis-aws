@@ -8,7 +8,7 @@ pipeline{
         }
         stage('Build stage'){
             steps{
-                'docker build -t devimage -f Dockerfile.dev .'
+                zsh 'docker build -t devimage -f Dockerfile.dev .'
             }
         }
     }
