@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build stage'){
         steps{
-            sudo 'docker build -t devimage -f Dockerfile.dev .'
+            docker build -t devimage -f Dockerfile.dev .
         }
     }    
   }
