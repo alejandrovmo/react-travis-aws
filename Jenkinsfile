@@ -1,5 +1,5 @@
 pipeline {
-  agent {label 'testslave'}
+  Docker {label 'testslave'}
   stages {
     stage('Git clone') {
         steps {
