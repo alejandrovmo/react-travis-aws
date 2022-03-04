@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build stage'){
         steps{
-            "docker ps"
+            sh "docker ps"
         }
     }    
   }
