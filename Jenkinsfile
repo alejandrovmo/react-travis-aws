@@ -1,5 +1,5 @@
 pipeline {
-  Docker {label 'testslave'}
+  docker {label 'testslave'}
   stages {
     stage('Git clone') {
         steps {
