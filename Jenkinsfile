@@ -1,4 +1,7 @@
-pipeline {
+pipeline { environment {
+    registry = "varmon/jenkins_slave"
+    registryCredential = 'dockerhub'
+  }
   agent {Docker} {label 'testslave'}
   stages {
     stage('Git clone') {
