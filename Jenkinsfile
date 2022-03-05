@@ -11,7 +11,7 @@ pipeline { environment {
     }
     stage('Build stage'){
         steps{
-            sh 'docker build -t devimage -f Dockerfile.dev .'
+            docker.build registry + ":last"
         }
     }    
   }
