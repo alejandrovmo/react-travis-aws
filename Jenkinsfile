@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Build stage'){
             steps{
-                docker.build registry + ":1"
+                sh 'docker build -t devimage -f Dockerfile.dev .'
             }
         }    
     }
