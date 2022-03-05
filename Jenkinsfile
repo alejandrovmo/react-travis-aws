@@ -1,6 +1,6 @@
 pipeline { 
     environment {
-        registry = "varmon/jenkins_slave"
+        registry = "varmon/jenkinsslve"
         registryCredential = 'dockerhub'
     }
     agent {Docker} {label 'testslave'}
