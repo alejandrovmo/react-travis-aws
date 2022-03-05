@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build stage'){
         steps{
-            sh 'ls -ltr'
+            sh 'docker build -t devimage -f Dockerfile.dev .'
         }
     }    
   }
