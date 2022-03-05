@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build stage'){
         steps{
-            sh "docker ps"
+            sh 'ls -ltr'
         }
     }    
   }
