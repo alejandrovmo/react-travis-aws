@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> Welcome to the AWS, Mr. Stark, Hulk
+          Edit <code>src/App.js</code> Prueba con jenkins y devops azure v2
         </p>
         <a
           className="App-link"
